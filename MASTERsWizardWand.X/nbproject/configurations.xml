@@ -4,6 +4,183 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="default" displayName="default" projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/default/bsp/bsp.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="driver" displayName="driver" projectFiles="true">
+            <logicalFolder name="usb" displayName="usb" projectFiles="true">
+              <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
+                  <itemPath>../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_variant_mapping.h</itemPath>
+                  <itemPath>../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_local.h</itemPath>
+                </logicalFolder>
+                <itemPath>../src/config/default/driver/usb/usbfsv1/drv_usbfsv1.h</itemPath>
+              </logicalFolder>
+              <itemPath>../src/config/default/driver/usb/drv_usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/default/driver/usb/drv_usb.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/config/default/driver/driver.h</itemPath>
+            <itemPath>../src/config/default/driver/driver_common.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="osal" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/default/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/default/osal/osal.h</itemPath>
+            <itemPath>../src/config/default/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="clock" displayName="clock" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/clock/plib_clock.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/evsys/plib_evsys.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/nvic/plib_nvic.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvmctrl" displayName="nvmctrl" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="port" displayName="port" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/port/plib_port.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="debug" displayName="debug" projectFiles="true">
+              <itemPath>../src/config/default/system/debug/sys_debug.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="int" displayName="int" projectFiles="true">
+              <itemPath>../src/config/default/system/int/sys_int_mapping.h</itemPath>
+              <itemPath>../src/config/default/system/int/sys_int.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/config/default/system/system_module.h</itemPath>
+            <itemPath>../src/config/default/system/system.h</itemPath>
+            <itemPath>../src/config/default/system/system_common.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="usb" displayName="usb" projectFiles="true">
+            <logicalFolder name="src" displayName="src" projectFiles="true">
+              <itemPath>../src/config/default/usb/src/usb_device_mapping.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_external_dependencies.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_local.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_function_driver.h</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_cdc_local.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/config/default/usb/usb_common.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_hub.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_device_cdc.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_client_driver.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_host_hub_interface.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_chapter_9.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_device.h</itemPath>
+            <itemPath>../src/config/default/usb/usb_cdc.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/config/default/interrupts.h</itemPath>
+          <itemPath>../src/config/default/user.h</itemPath>
+          <itemPath>../src/config/default/sys_tasks.h</itemPath>
+          <itemPath>../src/config/default/device_vectors.h</itemPath>
+          <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/default/device.h</itemPath>
+          <itemPath>../src/config/default/configuration.h</itemPath>
+          <itemPath>../src/config/default/definitions.h</itemPath>
+          <itemPath>../src/config/default/device_cache.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="packs" displayName="packs" projectFiles="true">
+        <logicalFolder name="ATSAMD21J18A_DFP"
+                       displayName="ATSAMD21J18A_DFP"
+                       projectFiles="true">
+          <logicalFolder name="component" displayName="component" projectFiles="true">
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/i2s.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/tcc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/fuses.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/sysctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/mtb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/tc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/sercom.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/pac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/port.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/hmatrixb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/evsys.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="instance" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/i2s.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sysctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/fuses.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sbmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pac2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/mtb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc4.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="pio" displayName="pio" projectFiles="true">
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/pio/samd21j18a.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/packs/ATSAMD21J18A_DFP/samd21j18a.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="Core" displayName="Core" projectFiles="true">
+              <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -14,10 +191,74 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="default" displayName="default" projectFiles="true">
+          <itemPath>../src/config/default/ATSAMD21J18A.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="default" displayName="default" projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/default/bsp/bsp.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="driver" displayName="driver" projectFiles="true">
+            <logicalFolder name="usb" displayName="usb" projectFiles="true">
+              <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
+                  <itemPath>../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c</itemPath>
+                  <itemPath>../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="clock" displayName="clock" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/clock/plib_clock.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/evsys/plib_evsys.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/nvic/plib_nvic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvmctrl" displayName="nvmctrl" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="port" displayName="port" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/port/plib_port.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
+            <itemPath>../src/config/default/stdio/xc32_monitor.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="int" displayName="int" projectFiles="true">
+              <itemPath>../src/config/default/system/int/src/sys_int.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="usb" displayName="usb" projectFiles="true">
+            <logicalFolder name="src" displayName="src" projectFiles="true">
+              <itemPath>../src/config/default/usb/src/usb_device.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_cdc.c</itemPath>
+              <itemPath>../src/config/default/usb/src/usb_device_cdc_acm.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/default/interrupts.c</itemPath>
+          <itemPath>../src/config/default/tasks.c</itemPath>
+          <itemPath>../src/config/default/exceptions.c</itemPath>
+          <itemPath>../src/config/default/initialization.c</itemPath>
+          <itemPath>../src/config/default/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/default/usb_device_init_data.c</itemPath>
+          <itemPath>../src/config/default/startup_xc32.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/default/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -25,10 +266,10 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>ATSAMD21G18A</targetDevice>
+        <targetDevice>ATSAMD21J18A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
@@ -73,7 +314,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/default;../src/packs/ATSAMD21J18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -140,13 +382,13 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="0"/>
+        <property key="heap-size" value="512"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
-        <property key="no-device-startup-code" value="false"/>
+        <property key="no-device-startup-code" value="true"/>
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
@@ -172,7 +414,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/default;../src/packs/ATSAMD21J18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
