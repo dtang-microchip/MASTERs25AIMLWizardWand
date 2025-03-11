@@ -1,10 +1,10 @@
  
 # Ignoring files according to http://microchip.wikidot.com/faq:72
-/MASTERsWizardWand.X/build/
-/MASTERsWizardWand.X/dist/
-/MASTERsWizardWand.X/debug/
+MASTERsWizardWand.X/build/
+MASTERsWizardWand.X/dist/
+MASTERsWizardWand.X/debug/
 
 #Ingoring private Makefiles, to create them open the MPLAB IDE or use the C:\Program Files (x86)\Microchip\MPLABX\<VERSION>\mplab_ide\bin\prjMakefilesGenerator.bat script
-/MASTERsWizardWand.X/nbproject/Makefile-*
-/MASTERsWizardWand.X/nbproject/Package-*
-/MASTERsWizardWand.X/nbproject/private/
+MASTERsWizardWand.X/nbproject/Makefile-*
+MASTERsWizardWand.X/nbproject/Package-*
+MASTERsWizardWand.X/nbproject/private/
