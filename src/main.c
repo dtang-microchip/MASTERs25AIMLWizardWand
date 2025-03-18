@@ -115,15 +115,16 @@ int main ( void )
         timermS.interval = 0;
         
         /* do stuff here , including changes in LED colors */
-        if ( PB1_Get() ==1 )
+        if ( SWITCH_Get() == 0 )
         {
-            ws2812.color.led[0].green= 0xFF;
             handle_button_press();
         }
         
+        execute_state_actions();
         
         /* ws2812 update is needed to feed the 
          * structure with any changed values to the peripherals */
+        ws2812.update = 1;
         ws2812_Update();
         }
         
@@ -179,26 +180,38 @@ void execute_state_actions(void){
      switch(currentState) {
                 case STATE_IDLE:
                     // Idle state actions
-//                    uint8_t buffer = "This is a test Send";
-//                    uint8_t numBytes = strlen(buffer);
-//                    USBCDCD_Semnd(&buffer, numBytes);
+                    ws2812.color.led[0].red = 0x00;
+                    ws2812.color.led[0].green = 0x00;
+                    ws2812.color.led[0].blue= 0x00;
                   break;
 
                 case STATE_INIT:
                     // Init state actions
+                    ws2812.color.led[0].red = 0xFF;
+                    ws2812.color.led[0].green = 0x00;
+                    ws2812.color.led[0].blue= 0x00;
                    break;
 
                 case STATE_RUNNING:
                     // Running state actions
+                    ws2812.color.led[0].red = 0x00;
+                    ws2812.color.led[0].green = 0xFF;
+                    ws2812.color.led[0].blue= 0x00;
                     break;
 
                 case STATE_ERROR:
                     // Error state actions
+                    ws2812.color.led[0].red = 0xFF;
+                    ws2812.color.led[0].green = 0x00;
+                    ws2812.color.led[0].blue= 0x00;
                     break;
 
                     
                 case STATE_STANDBY:
                     // Standby state actions
+                    ws2812.color.led[0].red = 0x00;
+                    ws2812.color.led[1].green = 0xFF;
+                    ws2812.color.led[0].blue= 0xFF;
                     break;
                     
                 default :
