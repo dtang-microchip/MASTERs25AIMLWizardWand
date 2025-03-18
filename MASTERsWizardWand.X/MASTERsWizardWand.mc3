@@ -415,6 +415,9 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;cdc_uart.c&lt;/Value&gt;
+      &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -428,6 +431,9 @@
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;cdc_uart.h&lt;/Value&gt;
+      &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -2788,7 +2794,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="GEN_APP_TASK_NAME_0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;CDC_Uart&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
 </value>
@@ -4868,12 +4876,12 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>..\src\app.c</file>
-         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
+         <file>..\src\cdc_uart.c</file>
+         <hash>af66bd3d311573044fc595eacc975441961acc85e04c67a7bc0c8fa059419644</hash>
       </entry>
       <entry>
-         <file>..\src\app.h</file>
-         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
+         <file>..\src\cdc_uart.h</file>
+         <hash>360d285ae70db5124cbf2db1ff0e6da85f42396a0c2d6cedaae05d55f09d10f1</hash>
       </entry>
       <entry>
          <file>..\src\config\default\ATSAMD21J18A.ld</file>
@@ -4893,7 +4901,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\definitions.h</file>
-         <hash>98585e9d0e0ca02302ce3f046e235730bf01bb2df55d92a4000d5b1833fe0d95</hash>
+         <hash>cf97c0494c73c4d76d1f79f146af908d03ece5f5727386ff2f7b3f8c0f555e61</hash>
       </entry>
       <entry>
          <file>..\src\config\default\device.h</file>
@@ -4949,7 +4957,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\initialization.c</file>
-         <hash>0659f796eaa86b0f386b821f445e2148f3cebde57f421967f1c58338f650ef5c</hash>
+         <hash>b0f174a6c3efa326b3a727a47db3fcfce0154a00248f6316bb9c672d05dbbf36</hash>
       </entry>
       <entry>
          <file>..\src\config\default\interrupts.c</file>
@@ -5061,7 +5069,7 @@
       </entry>
       <entry>
          <file>..\src\config\default\tasks.c</file>
-         <hash>3582431498d57f4db302bf9bd433d1595735bfe1399b606ec2714cd7c739d2d6</hash>
+         <hash>ad8716ae7a4df30c3db1482dfed21312693ccf7c028925840c0bae21e1cb5c75</hash>
       </entry>
       <entry>
          <file>..\src\config\default\toolchain_specifics.h</file>
