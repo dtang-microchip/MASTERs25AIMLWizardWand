@@ -44,9 +44,38 @@
 
 static void SYSCTRL_Initialize(void)
 {
+
+    /* Configure 8MHz Oscillator */
+    SYSCTRL_REGS->SYSCTRL_OSC8M = (SYSCTRL_REGS->SYSCTRL_OSC8M & (SYSCTRL_OSC8M_CALIB_Msk | SYSCTRL_OSC8M_FRANGE_Msk)) | SYSCTRL_OSC8M_ENABLE_Msk | SYSCTRL_OSC8M_PRESC(0x0U) ;
+
+    while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_OSC8MRDY_Msk) != SYSCTRL_PCLKSR_OSC8MRDY_Msk)
+    {
+        /* Waiting for the OSC8M Ready state */
+    }
     SYSCTRL_REGS->SYSCTRL_OSC32K = 0x0U;
 }
 
+static void FDPLL_Initialize(void)
+{
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_GEN(0x1)  | GCLK_CLKCTRL_CLKEN_Msk | GCLK_CLKCTRL_ID(1);
+
+    /****************** DPLL Initialization  *********************************/
+
+    /* Configure DPLL    */
+    SYSCTRL_REGS->SYSCTRL_DPLLCTRLB = SYSCTRL_DPLLCTRLB_FILTER(0x0U) | SYSCTRL_DPLLCTRLB_LTIME(0x0U)| SYSCTRL_DPLLCTRLB_REFCLK(0x2U) ;
+
+
+    SYSCTRL_REGS->SYSCTRL_DPLLRATIO = SYSCTRL_DPLLRATIO_LDRFRAC(0U) | SYSCTRL_DPLLRATIO_LDR(39U);
+
+    /* Selection of the DPLL Enable */
+    SYSCTRL_REGS->SYSCTRL_DPLLCTRLA = SYSCTRL_DPLLCTRLA_ENABLE_Msk   ;
+
+    while((SYSCTRL_REGS->SYSCTRL_DPLLSTATUS & (SYSCTRL_DPLLSTATUS_LOCK_Msk | SYSCTRL_DPLLSTATUS_CLKRDY_Msk)) !=
+                (SYSCTRL_DPLLSTATUS_LOCK_Msk | SYSCTRL_DPLLSTATUS_CLKRDY_Msk))
+    {
+        /* Waiting for the Ready state */
+    }
+}
 
 static void DFLL_Initialize(void)
 {
@@ -92,6 +121,30 @@ static void GCLK0_Initialize(void)
 }
 
 
+static void GCLK1_Initialize(void)
+{
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(6U) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(1U);
+
+    GCLK_REGS->GCLK_GENDIV = GCLK_GENDIV_DIV(4U) | GCLK_GENDIV_ID(1U);
+    while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
+    {
+        /* wait for the Generator 1 synchronization */
+    }
+}
+
+
+static void GCLK2_Initialize(void)
+{
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(8U) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(2U);
+
+    GCLK_REGS->GCLK_GENDIV = GCLK_GENDIV_DIV(2U) | GCLK_GENDIV_ID(2U);
+    while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
+    {
+        /* wait for the Generator 2 synchronization */
+    }
+}
+
+
 
 
 
@@ -101,15 +154,25 @@ void CLOCK_Initialize (void)
     SYSCTRL_Initialize();
 
     DFLL_Initialize();
+    GCLK1_Initialize();
     GCLK0_Initialize();
+    FDPLL_Initialize();
+    GCLK2_Initialize();
 
 
     /* Selection of the Generator and write Lock for USB */
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(6U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
+    /* Selection of the Generator and write Lock for TCC0 TCC1 */
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(26U) | GCLK_CLKCTRL_GEN(0x2U)  | GCLK_CLKCTRL_CLKEN_Msk;
+    /* Selection of the Generator and write Lock for TC3 TCC2 */
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(27U) | GCLK_CLKCTRL_GEN(0x2U)  | GCLK_CLKCTRL_CLKEN_Msk;
+    /* Selection of the Generator and write Lock for TC4 TC5 */
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(28U) | GCLK_CLKCTRL_GEN(0x2U)  | GCLK_CLKCTRL_CLKEN_Msk;
+
+    /* Configure the APBC Bridge Clocks */
+    PM_REGS->PM_APBCMASK = 0x11900U;
 
 
-    /*Disable RC oscillator*/
-    SYSCTRL_REGS->SYSCTRL_OSC8M = 0x0U;
 
 
 }
