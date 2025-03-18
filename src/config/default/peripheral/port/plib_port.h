@@ -74,6 +74,24 @@
 #define USB_VBUS_SENSE_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 14U)) & 0x01U)
 #define USB_VBUS_SENSE_PIN                  PORT_PIN_PA14
 
+/*** Macros for SWITCH pin ***/
+#define SWITCH_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 15U))
+#define SWITCH_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 15U))
+#define SWITCH_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 15U))
+#define SWITCH_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 15U))
+#define SWITCH_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 15U))
+#define SWITCH_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 15U)) & 0x01U)
+#define SWITCH_PIN                  PORT_PIN_PA15
+
+/*** Macros for LED pin ***/
+#define LED_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 30U))
+#define LED_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 30U))
+#define LED_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 30U))
+#define LED_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 30U))
+#define LED_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 30U))
+#define LED_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 30U)) & 0x01U)
+#define LED_PIN                  PORT_PIN_PA30
+
 // *****************************************************************************
 /* PORT Group
 

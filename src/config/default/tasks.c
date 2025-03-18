@@ -88,8 +88,8 @@ void SYS_Tasks ( void )
 
 
     /* Maintain the application's state machine. */
-        /* Call Application task APP. */
-    APP_Tasks();
+        /* Call Application task CDC_UART. */
+    CDC_UART_Tasks();
 
 
 

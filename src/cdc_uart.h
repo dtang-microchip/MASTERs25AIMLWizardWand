@@ -43,8 +43,8 @@
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _APP_H
-#define _APP_H
+#ifndef _CDC_UART_H
+#define _CDC_UART_H
 
 
 // *****************************************************************************
@@ -90,12 +90,6 @@ typedef enum
 
     /* The application checks if a switch was pressed */
     APP_STATE_CHECK_SWITCH_PRESSED,
-
-    /* Wait for a character receive */
-    APP_STATE_SCHEDULE_READ,
-
-    /* A character is received from host */
-    APP_STATE_WAIT_FOR_READ_COMPLETE,
 
     /* Wait for the TX to get completed */
     APP_STATE_SCHEDULE_WRITE,
@@ -228,7 +222,7 @@ typedef struct
     This routine must be called from the SYS_Initialize function.
 */
 
-void APP_Initialize ( void );
+void CDC_UART_Initialize ( void );
 
 
 /*******************************************************************************
@@ -261,8 +255,28 @@ void APP_Initialize ( void );
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks ( void );
+void CDC_UART_Tasks ( void );
 
+
+/*******************************************************************************
+  Function:
+    void CDC_UART_Transfer  ( void )
+
+  Description:
+    Deliver a buffer over USB CDC UART
+
+  Parameters:
+    unit8_t* buf
+    size_t numBytes
+
+  Returns:
+    None.
+
+  Remarks:
+    Deliver a buffer over USB CDC UART
+ */
+
+void CDC_UART_Transfer (uint8_t* buf, size_t numBytes );
 
 #endif /* _APP_H */
 /*******************************************************************************

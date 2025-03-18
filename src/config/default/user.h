@@ -34,6 +34,9 @@ extern "C" {
 // *****************************************************************************
 #define APP_USB_SWITCH_DEBOUNCE_COUNT_FS                    150
 #define APP_USB_SWITCH_DEBOUNCE_COUNT_HS                    1200
+    
+#define SWITCH_STATE_PRESSED   0
+#define SWITCH_STATE_RELEASED  1
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

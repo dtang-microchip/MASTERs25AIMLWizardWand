@@ -6,9 +6,6 @@
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
-          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.h</itemPath>
-          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
@@ -180,7 +177,7 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/app.h</itemPath>
+      <itemPath>../src/cdc_uart.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -202,9 +199,6 @@
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
-          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.c</itemPath>
-          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
@@ -257,8 +251,8 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
+      <itemPath>../src/cdc_uart.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -446,6 +440,12 @@
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <EdbgTool>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-3ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/C75166/projects/MASTERs25AIMLWizardWand/MASTERsWizardWand.X/debug/default/MASTERsWizardWand_ptg"/>
+      </EdbgTool>
     </conf>
   </confs>
 </configurationDescriptor>

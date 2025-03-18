@@ -207,7 +207,6 @@ void SYS_Initialize ( void* data )
 
 
 
-	BSP_Initialize();
     NVMCTRL_Initialize( );
 
 
@@ -230,7 +229,7 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
-    APP_Initialize();
+    CDC_UART_Initialize();
 
 
     NVIC_Initialize();
