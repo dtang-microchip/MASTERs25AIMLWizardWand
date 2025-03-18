@@ -6,9 +6,6 @@
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
-          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.h</itemPath>
-          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
@@ -202,9 +199,6 @@
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
-          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.c</itemPath>
-          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="usb" displayName="usb" projectFiles="true">
               <logicalFolder name="usbfsv1" displayName="usbfsv1" projectFiles="true">
