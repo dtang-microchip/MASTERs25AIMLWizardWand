@@ -440,6 +440,12 @@
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <EdbgTool>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-3ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/C75166/projects/MASTERs25AIMLWizardWand/MASTERsWizardWand.X/debug/default/MASTERsWizardWand_ptg"/>
+      </EdbgTool>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -64,6 +64,9 @@
 
 uint8_t CACHE_ALIGN switchPromptUSB[] = "\r\nPUSH BUTTON PRESSED";
 
+uint8_t* pOutgoingBuffer;
+size_t BytesToSend;
+
 uint8_t CACHE_ALIGN cdcReadBuffer[APP_READ_BUFFER_SIZE];
 uint8_t CACHE_ALIGN cdcWriteBuffer[APP_READ_BUFFER_SIZE];
 
@@ -304,57 +307,6 @@ void APP_USBDeviceEventHandler
 // *****************************************************************************
 // *****************************************************************************
 
-void APP_ProcessSwitchPress(void)
-{
-    /* This function checks if the switch is pressed and then
-     * debounces the switch press*/
-    
-    if(SWITCH_STATE_PRESSED == (SWITCH_Get()))
-    {
-        if(appData.ignoreSwitchPress)
-        {
-            /* This means the key press is in progress */
-            if(appData.sofEventHasOccurred)
-            {
-                /* A timer event has occurred. Update the debounce timer */
-                appData.switchDebounceTimer ++;
-                appData.sofEventHasOccurred = false;
-                
-                if (USB_DEVICE_ActiveSpeedGet(appData.deviceHandle) == USB_SPEED_FULL)
-                {
-                    appData.debounceCount = APP_USB_SWITCH_DEBOUNCE_COUNT_FS;
-                }
-                else if (USB_DEVICE_ActiveSpeedGet(appData.deviceHandle) == USB_SPEED_HIGH)
-                {
-                    appData.debounceCount = APP_USB_SWITCH_DEBOUNCE_COUNT_HS;
-                }
-                if(appData.switchDebounceTimer == appData.debounceCount)
-                {
-                    /* Indicate that we have valid switch press. The switch is
-                     * pressed flag will be cleared by the application tasks
-                     * routine. We should be ready for the next key press.*/
-                    appData.isSwitchPressed = true;
-                    appData.switchDebounceTimer = 0;
-                    appData.ignoreSwitchPress = false;
-                }
-            }
-        }
-        else
-        {
-            /* We have a fresh key press */
-            appData.ignoreSwitchPress = true;
-            appData.switchDebounceTimer = 0;
-        }
-    }
-    else
-    {
-        /* No key press. Reset all the indicators. */
-        appData.ignoreSwitchPress = false;
-        appData.switchDebounceTimer = 0;
-        appData.sofEventHasOccurred = false;
-    }
-}
-
 /*****************************************************
  * This function is called in every step of the
  * application state machine.
@@ -459,7 +411,6 @@ void CDC_UART_Tasks(void)
 {
     /* Update the application state machine based
      * on the current state */
-    int i;
     
     switch(appData.state)
     {
@@ -489,41 +440,11 @@ void CDC_UART_Tasks(void)
             if(appData.isConfigured)
             {
                 /* If the device is configured then lets start reading */
-                appData.state = APP_STATE_SCHEDULE_READ;
+                appData.state = APP_STATE_CHECK_SWITCH_PRESSED;
             }
             
             break;
 
-        case APP_STATE_SCHEDULE_READ:
-
-            if(APP_StateReset())
-            {
-                break;
-            }
-
-            /* If a read is complete, then schedule a read
-             * else wait for the current read to complete */
-
-            appData.state = APP_STATE_WAIT_FOR_READ_COMPLETE;
-            if(appData.isReadComplete == true)
-            {
-                appData.isReadComplete = false;
-                appData.readTransferHandle =  USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID;
-
-                USB_DEVICE_CDC_Read (USB_DEVICE_CDC_INDEX_0,
-                        &appData.readTransferHandle, appData.cdcReadBuffer,
-                        APP_READ_BUFFER_SIZE);
-                
-                if(appData.readTransferHandle == USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID)
-                {
-                    appData.state = APP_STATE_ERROR;
-                    break;
-                }
-            }
-
-            break;
-
-        case APP_STATE_WAIT_FOR_READ_COMPLETE:
         case APP_STATE_CHECK_SWITCH_PRESSED:
 
             if(APP_StateReset())
@@ -531,12 +452,7 @@ void CDC_UART_Tasks(void)
                 break;
             }
 
-            APP_ProcessSwitchPress();
-
-            /* Check if a character was received or a switch was pressed.
-             * The isReadComplete flag gets updated in the CDC event handler. */
-
-            if(appData.isReadComplete || appData.isSwitchPressed)
+            if(appData.isSwitchPressed)
             {
                 appData.state = APP_STATE_SCHEDULE_WRITE;
             }
@@ -562,22 +478,7 @@ void CDC_UART_Tasks(void)
                 /* If the switch was pressed, then send the switch prompt*/
                 appData.isSwitchPressed = false;
                 USB_DEVICE_CDC_Write(USB_DEVICE_CDC_INDEX_0,
-                        &appData.writeTransferHandle, switchPromptUSB, sizeof(switchPromptUSB),
-                        USB_DEVICE_CDC_TRANSFER_FLAGS_DATA_COMPLETE);
-            }
-            else
-            {
-                /* Else echo each received character by adding 1 */
-                for(i = 0; i < appData.numBytesRead; i++)
-                {
-                    if((appData.cdcReadBuffer[i] != 0x0A) && (appData.cdcReadBuffer[i] != 0x0D))
-                    {
-                        appData.cdcWriteBuffer[i] = appData.cdcReadBuffer[i] + 1;
-                    }
-                }
-                USB_DEVICE_CDC_Write(USB_DEVICE_CDC_INDEX_0,
-                        &appData.writeTransferHandle,
-                        appData.cdcWriteBuffer, appData.numBytesRead,
+                        &appData.writeTransferHandle, pOutgoingBuffer, BytesToSend,
                         USB_DEVICE_CDC_TRANSFER_FLAGS_DATA_COMPLETE);
             }
 
@@ -595,7 +496,7 @@ void CDC_UART_Tasks(void)
 
             if(appData.isWriteComplete == true)
             {
-                appData.state = APP_STATE_SCHEDULE_READ;
+                appData.state = APP_STATE_CHECK_SWITCH_PRESSED;
             }
 
             break;
@@ -604,6 +505,14 @@ void CDC_UART_Tasks(void)
         default:
             
             break;
+    }
+}
+
+void CDC_UART_Transfer (uint8_t* buf, size_t numBytes ) {
+    if(appData.state == APP_STATE_CHECK_SWITCH_PRESSED){
+        pOutgoingBuffer = buf;
+        BytesToSend = numBytes;
+        appData.isSwitchPressed = 1;
     }
 }
 
