@@ -104,8 +104,15 @@ void CLOCK_Initialize (void)
     GCLK0_Initialize();
 
 
+    /* Selection of the Generator and write Lock for EIC */
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(5U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for USB */
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(6U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
+    /* Selection of the Generator and write Lock for SERCOM0_CORE */
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(20U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
+
+    /* Configure the APBC Bridge Clocks */
+    PM_REGS->PM_APBCMASK = 0x10004U;
 
 
     /*Disable RC oscillator*/

@@ -1,23 +1,23 @@
 /*******************************************************************************
- System Tasks File
+  External Interrupt Controller (EIC) PLIB
 
-  File Name:
-    tasks.c
+  Company
+    Microchip Technology Inc.
 
-  Summary:
-    This file contains source code necessary to maintain system's polled tasks.
+  File Name
+    plib_eic.h
 
-  Description:
-    This file contains source code necessary to maintain system's polled tasks.
-    It implements the "SYS_Tasks" function that calls the individual "Tasks"
-    functions for all polled MPLAB Harmony modules in the system.
+  Summary
+    EIC PLIB Header File.
+
+  Description
+    This file defines the interface to the EIC peripheral library. This
+    library provides access to and control of the associated peripheral
+    instance.
 
   Remarks:
-    This file requires access to the systemObjects global data structure that
-    contains the object handles to all MPLAB Harmony module objects executing
-    polled in the system.  These handles are passed into the individual module
-    "Tasks" functions to identify the instance of the module to maintain.
- *******************************************************************************/
+    None.
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -41,8 +41,12 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
+*******************************************************************************/
 // DOM-IGNORE-END
+
+/* Guards against multiple inclusion */
+#ifndef PLIB_EIC_H
+#define PLIB_EIC_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -50,53 +54,73 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "configuration.h"
-#include "definitions.h"
-#include "sys_tasks.h"
+#include "device.h"
+#include <stdbool.h>
+#include <stddef.h>
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
 
+    extern "C" {
 
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System "Tasks" Routine
+// Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
 
-/*******************************************************************************
-  Function:
-    void SYS_Tasks ( void )
+/* EIC Pin Count */
+#define EXTINT_COUNT                        (16U)
 
-  Remarks:
-    See prototype in system/common/sys_module.h.
-*/
-void SYS_Tasks ( void )
+typedef enum
 {
-    /* Maintain system services */
-    
+    /* External Interrupt Controller Pin 10 */
+    EIC_PIN_10 = 10,
 
-    /* Maintain Device Drivers */
-    
+    EIC_PIN_MAX = 16
 
-    /* Maintain Middleware & Other Libraries */
-        /* USB Device layer tasks routine */ 
-    USB_DEVICE_Tasks(sysObj.usbDevObject0);
-
-    /* USB FS Driver Task Routine */ 
-    DRV_USBFSV1_Tasks(sysObj.drvUSBFSV1Object);
+} EIC_PIN;
 
 
+typedef void (*EIC_CALLBACK) (uintptr_t context);
 
-    /* Maintain the application's state machine. */
-        /* Call Application task CDC_UART. */
-    CDC_UART_Tasks();
+typedef struct
+{
+    /* External Interrupt Pin Callback Handler */
+    EIC_CALLBACK    callback;
+
+    /* External Interrupt Pin Client context */
+    uintptr_t       context;
+
+    /* External Interrupt Pin number */
+    EIC_PIN         eicPinNo;
+
+} EIC_CALLBACK_OBJ;
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// *****************************************************************************
+
+void EIC_Initialize(void);
+
+void EIC_InterruptEnable(EIC_PIN pin);
+
+void EIC_InterruptDisable(EIC_PIN pin);
+
+void EIC_CallbackRegister(EIC_PIN pin, EIC_CALLBACK callback, uintptr_t context);
 
 
 
+#ifdef __cplusplus // Provide C++ Compatibility
 
-}
+    }
 
-/*******************************************************************************
- End of File
- */
+#endif
 
+#endif /* PLIB_EIC_H */
