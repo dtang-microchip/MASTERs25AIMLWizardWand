@@ -4,6 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
+        <itemPath>../src/bmi160/bmi160.h</itemPath>
+        <itemPath>../src/bmi160/bmi160_defs.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
@@ -83,6 +87,17 @@
           <itemPath>../src/config/default/definitions.h</itemPath>
           <itemPath>../src/config/default/device_cache.h</itemPath>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="Icm426xx" displayName="Icm426xx" projectFiles="true">
+        <itemPath>../src/Icm426xx/Icm426xxDefs.h</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxDriver_HL.h</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxDriver_HL_apex.h</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxExtFunc.h</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxSelfTest.h</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxTransport.h</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxVersion.h</itemPath>
+        <itemPath>../src/Icm426xx/InvError.h</itemPath>
+        <itemPath>../src/Icm426xx/InvExport.h</itemPath>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
         <logicalFolder name="ATSAMD21J18A_DFP"
@@ -178,6 +193,9 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/cdc_uart.h</itemPath>
+      <itemPath>../src/ringbuffer.h</itemPath>
+      <itemPath>../src/sensor.h</itemPath>
+      <itemPath>../src/sensor_config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -197,6 +215,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="app_config" displayName="app_config" projectFiles="true">
+        <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
+          <itemPath>../src/app_config/bmi160/bmi160_sensor.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="icm42688" displayName="icm42688" projectFiles="true">
+          <itemPath>../src/app_config/icm42688/icm42688_sensor.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
+        <itemPath>../src/bmi160/bmi160.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
@@ -250,11 +279,21 @@
           <itemPath>../src/config/default/startup_xc32.c</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="Icm426xx" displayName="Icm426xx" projectFiles="true">
+        <itemPath>../src/Icm426xx/Icm426xxDriver_HL.c</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxDriver_HL_apex.c</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxSelfTest.c</itemPath>
+        <itemPath>../src/Icm426xx/Icm426xxTransport.c</itemPath>
+      </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/cdc_uart.c</itemPath>
+      <itemPath>../src/ringbuffer.c</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -503,6 +542,12 @@
         <property key="voltagevalue" value=""/>
         <property key="x.erase.clearprot" value="true"/>
       </EdbgTool>
+      <Tool>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-3ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/C75166/projects/MASTERs25AIMLWizardWand/MASTERsWizardWand.X/debug/default/MASTERsWizardWand_ptg"/>
+      </Tool>
     </conf>
   </confs>
 </configurationDescriptor>
