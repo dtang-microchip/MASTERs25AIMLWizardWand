@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/system/int/src/sys_int.c ../src/config/default/usb/src/usb_device.c ../src/config/default/usb/src/usb_device_cdc.c ../src/config/default/usb/src/usb_device_cdc_acm.c ../src/config/default/interrupts.c ../src/config/default/tasks.c ../src/config/default/exceptions.c ../src/config/default/initialization.c ../src/config/default/libc_syscalls.c ../src/config/default/usb_device_init_data.c ../src/config/default/startup_xc32.c ../src/main.c ../src/cdc_uart.c ../src/bmi160/bmi160.c ../src/Icm426xx/Icm426xxDriver_HL.c ../src/Icm426xx/Icm426xxDriver_HL_apex.c ../src/Icm426xx/Icm426xxSelfTest.c ../src/Icm426xx/Icm426xxTransport.c ../src/ringbuffer.c ../src/app_config/bmi160/bmi160_sensor.c ../src/app_config/icm42688/icm42688_sensor.c ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c ../src/config/default/peripheral/eic/plib_eic.c
+SOURCEFILES_QUOTED_IF_SPACED=../src/app_config/icm42688/icm42688_sensor.c ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/eic/plib_eic.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/system/int/src/sys_int.c ../src/config/default/usb/src/usb_device.c ../src/config/default/usb/src/usb_device_cdc.c ../src/config/default/usb/src/usb_device_cdc_acm.c ../src/config/default/interrupts.c ../src/config/default/tasks.c ../src/config/default/exceptions.c ../src/config/default/initialization.c ../src/config/default/libc_syscalls.c ../src/config/default/usb_device_init_data.c ../src/config/default/startup_xc32.c ../src/Icm426xx/Icm426xxDriver_HL.c ../src/Icm426xx/Icm426xxDriver_HL_apex.c ../src/Icm426xx/Icm426xxSelfTest.c ../src/Icm426xx/Icm426xxTransport.c ../src/main.c ../src/cdc_uart.c ../src/ringbuffer.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o ${OBJECTDIR}/_ext/818654064/drv_usbfsv1.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1881668453/sys_int.o ${OBJECTDIR}/_ext/308758920/usb_device.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc_acm.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/tasks.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/1171490990/usb_device_init_data.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/1360937237/cdc_uart.o ${OBJECTDIR}/_ext/424700249/bmi160.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ${OBJECTDIR}/_ext/60167341/plib_eic.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o.d ${OBJECTDIR}/_ext/818654064/drv_usbfsv1.o.d ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d ${OBJECTDIR}/_ext/1865521619/plib_port.o.d ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d ${OBJECTDIR}/_ext/1881668453/sys_int.o.d ${OBJECTDIR}/_ext/308758920/usb_device.o.d ${OBJECTDIR}/_ext/308758920/usb_device_cdc.o.d ${OBJECTDIR}/_ext/308758920/usb_device_cdc_acm.o.d ${OBJECTDIR}/_ext/1171490990/interrupts.o.d ${OBJECTDIR}/_ext/1171490990/tasks.o.d ${OBJECTDIR}/_ext/1171490990/exceptions.o.d ${OBJECTDIR}/_ext/1171490990/initialization.o.d ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d ${OBJECTDIR}/_ext/1171490990/usb_device_init_data.o.d ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d ${OBJECTDIR}/_ext/1360937237/main.o.d ${OBJECTDIR}/_ext/1360937237/cdc_uart.o.d ${OBJECTDIR}/_ext/424700249/bmi160.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d ${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o.d ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d ${OBJECTDIR}/_ext/60167341/plib_eic.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o ${OBJECTDIR}/_ext/818654064/drv_usbfsv1.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/60167341/plib_eic.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1881668453/sys_int.o ${OBJECTDIR}/_ext/308758920/usb_device.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc_acm.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/tasks.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/1171490990/usb_device_init_data.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/1360937237/cdc_uart.o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o.d ${OBJECTDIR}/_ext/818654064/drv_usbfsv1.o.d ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d ${OBJECTDIR}/_ext/60167341/plib_eic.o.d ${OBJECTDIR}/_ext/1986646378/plib_evsys.o.d ${OBJECTDIR}/_ext/1865468468/plib_nvic.o.d ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o.d ${OBJECTDIR}/_ext/1865521619/plib_port.o.d ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d ${OBJECTDIR}/_ext/163028504/xc32_monitor.o.d ${OBJECTDIR}/_ext/1881668453/sys_int.o.d ${OBJECTDIR}/_ext/308758920/usb_device.o.d ${OBJECTDIR}/_ext/308758920/usb_device_cdc.o.d ${OBJECTDIR}/_ext/308758920/usb_device_cdc_acm.o.d ${OBJECTDIR}/_ext/1171490990/interrupts.o.d ${OBJECTDIR}/_ext/1171490990/tasks.o.d ${OBJECTDIR}/_ext/1171490990/exceptions.o.d ${OBJECTDIR}/_ext/1171490990/initialization.o.d ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o.d ${OBJECTDIR}/_ext/1171490990/usb_device_init_data.o.d ${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d ${OBJECTDIR}/_ext/1360937237/main.o.d ${OBJECTDIR}/_ext/1360937237/cdc_uart.o.d ${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o ${OBJECTDIR}/_ext/818654064/drv_usbfsv1.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1881668453/sys_int.o ${OBJECTDIR}/_ext/308758920/usb_device.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc_acm.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/tasks.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/1171490990/usb_device_init_data.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/1360937237/cdc_uart.o ${OBJECTDIR}/_ext/424700249/bmi160.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ${OBJECTDIR}/_ext/60167341/plib_eic.o
+OBJECTFILES=${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o ${OBJECTDIR}/_ext/818654064/drv_usbfsv1.o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ${OBJECTDIR}/_ext/60167341/plib_eic.o ${OBJECTDIR}/_ext/1986646378/plib_evsys.o ${OBJECTDIR}/_ext/1865468468/plib_nvic.o ${OBJECTDIR}/_ext/1593096446/plib_nvmctrl.o ${OBJECTDIR}/_ext/1865521619/plib_port.o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ${OBJECTDIR}/_ext/163028504/xc32_monitor.o ${OBJECTDIR}/_ext/1881668453/sys_int.o ${OBJECTDIR}/_ext/308758920/usb_device.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc.o ${OBJECTDIR}/_ext/308758920/usb_device_cdc_acm.o ${OBJECTDIR}/_ext/1171490990/interrupts.o ${OBJECTDIR}/_ext/1171490990/tasks.o ${OBJECTDIR}/_ext/1171490990/exceptions.o ${OBJECTDIR}/_ext/1171490990/initialization.o ${OBJECTDIR}/_ext/1171490990/libc_syscalls.o ${OBJECTDIR}/_ext/1171490990/usb_device_init_data.o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/1360937237/cdc_uart.o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o
 
 # Source Files
-SOURCEFILES=../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/system/int/src/sys_int.c ../src/config/default/usb/src/usb_device.c ../src/config/default/usb/src/usb_device_cdc.c ../src/config/default/usb/src/usb_device_cdc_acm.c ../src/config/default/interrupts.c ../src/config/default/tasks.c ../src/config/default/exceptions.c ../src/config/default/initialization.c ../src/config/default/libc_syscalls.c ../src/config/default/usb_device_init_data.c ../src/config/default/startup_xc32.c ../src/main.c ../src/cdc_uart.c ../src/bmi160/bmi160.c ../src/Icm426xx/Icm426xxDriver_HL.c ../src/Icm426xx/Icm426xxDriver_HL_apex.c ../src/Icm426xx/Icm426xxSelfTest.c ../src/Icm426xx/Icm426xxTransport.c ../src/ringbuffer.c ../src/app_config/bmi160/bmi160_sensor.c ../src/app_config/icm42688/icm42688_sensor.c ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c ../src/config/default/peripheral/eic/plib_eic.c
+SOURCEFILES=../src/app_config/icm42688/icm42688_sensor.c ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1.c ../src/config/default/peripheral/clock/plib_clock.c ../src/config/default/peripheral/eic/plib_eic.c ../src/config/default/peripheral/evsys/plib_evsys.c ../src/config/default/peripheral/nvic/plib_nvic.c ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c ../src/config/default/peripheral/port/plib_port.c ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c ../src/config/default/stdio/xc32_monitor.c ../src/config/default/system/int/src/sys_int.c ../src/config/default/usb/src/usb_device.c ../src/config/default/usb/src/usb_device_cdc.c ../src/config/default/usb/src/usb_device_cdc_acm.c ../src/config/default/interrupts.c ../src/config/default/tasks.c ../src/config/default/exceptions.c ../src/config/default/initialization.c ../src/config/default/libc_syscalls.c ../src/config/default/usb_device_init_data.c ../src/config/default/startup_xc32.c ../src/Icm426xx/Icm426xxDriver_HL.c ../src/Icm426xx/Icm426xxDriver_HL_apex.c ../src/Icm426xx/Icm426xxSelfTest.c ../src/Icm426xx/Icm426xxTransport.c ../src/main.c ../src/cdc_uart.c ../src/ringbuffer.c
 
 # Pack Options 
 PACK_COMMON_OPTIONS=-I "${CMSIS_DIR}/CMSIS/Core/Include"
@@ -104,6 +104,12 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o: ../src/app_config/icm42688/icm42688_sensor.c  .generated_files/flags/default/9db8e26d68cf8c752d2caaefcb813295bf621bd2 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/2048461350" 
+	@${RM} ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d" -o ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ../src/app_config/icm42688/icm42688_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
 ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o: ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c  .generated_files/flags/default/74676a75cde0a90cb120fba533482d05327731d9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/818654064" 
 	@${RM} ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o.d 
@@ -121,6 +127,12 @@ ${OBJECTDIR}/_ext/1984496892/plib_clock.o: ../src/config/default/peripheral/cloc
 	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984496892/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ../src/config/default/peripheral/clock/plib_clock.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/60167341/plib_eic.o: ../src/config/default/peripheral/eic/plib_eic.c  .generated_files/flags/default/881127bbb201ab4b4ac004f0f5559097821e7e9b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/60167341" 
+	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o.d 
+	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60167341/plib_eic.o.d" -o ${OBJECTDIR}/_ext/60167341/plib_eic.o ../src/config/default/peripheral/eic/plib_eic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
 ${OBJECTDIR}/_ext/1986646378/plib_evsys.o: ../src/config/default/peripheral/evsys/plib_evsys.c  .generated_files/flags/default/6bcfae78e0b0d60fa8c9d56245cb72d0544cf9f1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1986646378" 
@@ -145,6 +157,12 @@ ${OBJECTDIR}/_ext/1865521619/plib_port.o: ../src/config/default/peripheral/port/
 	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865521619/plib_port.o.d" -o ${OBJECTDIR}/_ext/1865521619/plib_port.o ../src/config/default/peripheral/port/plib_port.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o: ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/default/cb81118a74190b5dd85d073ef773c9d78f4798e1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/17022449" 
+	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d 
+	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d" -o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
 ${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/flags/default/4c2500423fd9cf8116d92523eade1d2434aaf792 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
@@ -218,6 +236,30 @@ ${OBJECTDIR}/_ext/1171490990/startup_xc32.o: ../src/config/default/startup_xc32.
 	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ../src/config/default/startup_xc32.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
+${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o: ../src/Icm426xx/Icm426xxDriver_HL.c  .generated_files/flags/default/4b0bd7e11292eaa057fd1c8ed9c4c2090dfef0e0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ../src/Icm426xx/Icm426xxDriver_HL.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o: ../src/Icm426xx/Icm426xxDriver_HL_apex.c  .generated_files/flags/default/e5a07d3b4393fba1801c615c1ae4a2db79893a3d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ../src/Icm426xx/Icm426xxDriver_HL_apex.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o: ../src/Icm426xx/Icm426xxSelfTest.c  .generated_files/flags/default/fb691b42161ac7757a95d3f77d97e30dfe904cb7 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ../src/Icm426xx/Icm426xxSelfTest.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o: ../src/Icm426xx/Icm426xxTransport.c  .generated_files/flags/default/81975d3eefd3c364a7b8c82484ad65157d5e7106 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ../src/Icm426xx/Icm426xxTransport.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
 ${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/default/eec995afbb4efd86fe5c7d578c1ebfb4187348a5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
@@ -230,67 +272,19 @@ ${OBJECTDIR}/_ext/1360937237/cdc_uart.o: ../src/cdc_uart.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1360937237/cdc_uart.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/cdc_uart.o.d" -o ${OBJECTDIR}/_ext/1360937237/cdc_uart.o ../src/cdc_uart.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/424700249/bmi160.o: ../src/bmi160/bmi160.c  .generated_files/flags/default/67a8cb2d59ead93efa0c80bbf9ae6edcc9def20d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/424700249" 
-	@${RM} ${OBJECTDIR}/_ext/424700249/bmi160.o.d 
-	@${RM} ${OBJECTDIR}/_ext/424700249/bmi160.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/424700249/bmi160.o.d" -o ${OBJECTDIR}/_ext/424700249/bmi160.o ../src/bmi160/bmi160.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o: ../src/Icm426xx/Icm426xxDriver_HL.c  .generated_files/flags/default/6a4d36d86ea77323bc9bc7b3fbce72c0980eb381 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ../src/Icm426xx/Icm426xxDriver_HL.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o: ../src/Icm426xx/Icm426xxDriver_HL_apex.c  .generated_files/flags/default/9d469a0e9f73b0c3b0f1314ab8826e27b883a06a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ../src/Icm426xx/Icm426xxDriver_HL_apex.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o: ../src/Icm426xx/Icm426xxSelfTest.c  .generated_files/flags/default/47c7821850cb664d206d61da063ac0250202ce35 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ../src/Icm426xx/Icm426xxSelfTest.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o: ../src/Icm426xx/Icm426xxTransport.c  .generated_files/flags/default/23d14a7b31c8a018a3f21117c9c1f8a5f35966a0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ../src/Icm426xx/Icm426xxTransport.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1360937237/ringbuffer.o: ../src/ringbuffer.c  .generated_files/flags/default/94261dcb78e67860fd55fe4e5dc067404f6d373c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1360937237/ringbuffer.o: ../src/ringbuffer.c  .generated_files/flags/default/1b60d4923fe19098c82c7ade7701688fb0345e7f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/ringbuffer.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d" -o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o ../src/ringbuffer.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d" -o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o ../src/ringbuffer.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/21102530/bmi160_sensor.o: ../src/app_config/bmi160/bmi160_sensor.c  .generated_files/flags/default/a542004c175297d082964c4026078f151c626488 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/21102530" 
-	@${RM} ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/21102530/bmi160_sensor.o.d" -o ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o ../src/app_config/bmi160/bmi160_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o: ../src/app_config/icm42688/icm42688_sensor.c  .generated_files/flags/default/2c5b3982d868fa037223e6095a5d7e24bd0d5c04 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+else
+${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o: ../src/app_config/icm42688/icm42688_sensor.c  .generated_files/flags/default/d463a5247185e38640be3702ec7ea2a3bf004f47 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/2048461350" 
 	@${RM} ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d" -o ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ../src/app_config/icm42688/icm42688_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d" -o ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ../src/app_config/icm42688/icm42688_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o: ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/default/5c7e67451f61a05a340d7282dcbb5bb177fae6e6 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/17022449" 
-	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d 
-	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d" -o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/60167341/plib_eic.o: ../src/config/default/peripheral/eic/plib_eic.c  .generated_files/flags/default/a3b2dbc72529ecd345c1cb033c569fc169a6092f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/60167341" 
-	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o.d 
-	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60167341/plib_eic.o.d" -o ${OBJECTDIR}/_ext/60167341/plib_eic.o ../src/config/default/peripheral/eic/plib_eic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-else
 ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o: ../src/config/default/driver/usb/usbfsv1/src/drv_usbfsv1_device.c  .generated_files/flags/default/c15e7bbdf4445b5d2fb9f31840f5514a0a7fa6a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/818654064" 
 	@${RM} ${OBJECTDIR}/_ext/818654064/drv_usbfsv1_device.o.d 
@@ -308,6 +302,12 @@ ${OBJECTDIR}/_ext/1984496892/plib_clock.o: ../src/config/default/peripheral/cloc
 	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1984496892/plib_clock.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1984496892/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1984496892/plib_clock.o ../src/config/default/peripheral/clock/plib_clock.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/60167341/plib_eic.o: ../src/config/default/peripheral/eic/plib_eic.c  .generated_files/flags/default/8c9939f58a23149e3366e810d05d8f5f582af07d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/60167341" 
+	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o.d 
+	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60167341/plib_eic.o.d" -o ${OBJECTDIR}/_ext/60167341/plib_eic.o ../src/config/default/peripheral/eic/plib_eic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
 ${OBJECTDIR}/_ext/1986646378/plib_evsys.o: ../src/config/default/peripheral/evsys/plib_evsys.c  .generated_files/flags/default/ed1472adff0532cb23a2024675620c83570c5a0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1986646378" 
@@ -332,6 +332,12 @@ ${OBJECTDIR}/_ext/1865521619/plib_port.o: ../src/config/default/peripheral/port/
 	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1865521619/plib_port.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1865521619/plib_port.o.d" -o ${OBJECTDIR}/_ext/1865521619/plib_port.o ../src/config/default/peripheral/port/plib_port.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o: ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/default/349de8de0a0f5abd7c47af52c08c73596842af5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/17022449" 
+	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d 
+	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d" -o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
 ${OBJECTDIR}/_ext/163028504/xc32_monitor.o: ../src/config/default/stdio/xc32_monitor.c  .generated_files/flags/default/a3045b33ed6ffa372bd3f8cc6b3fe9c62fbc0c33 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/163028504" 
@@ -405,6 +411,30 @@ ${OBJECTDIR}/_ext/1171490990/startup_xc32.o: ../src/config/default/startup_xc32.
 	@${RM} ${OBJECTDIR}/_ext/1171490990/startup_xc32.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1171490990/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/1171490990/startup_xc32.o ../src/config/default/startup_xc32.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
+${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o: ../src/Icm426xx/Icm426xxDriver_HL.c  .generated_files/flags/default/9d53b68284473a8337f12a0a4691ac8f417fe3df .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ../src/Icm426xx/Icm426xxDriver_HL.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o: ../src/Icm426xx/Icm426xxDriver_HL_apex.c  .generated_files/flags/default/58b2934cfe5f58c49b9acedb71b7d9fc3673842f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ../src/Icm426xx/Icm426xxDriver_HL_apex.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o: ../src/Icm426xx/Icm426xxSelfTest.c  .generated_files/flags/default/399538287ad07fae96df80f8f7b9f9a41021a084 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ../src/Icm426xx/Icm426xxSelfTest.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
+${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o: ../src/Icm426xx/Icm426xxTransport.c  .generated_files/flags/default/a723c80f3a3c01664d0fcb1215c36c0f10945d88 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d 
+	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ../src/Icm426xx/Icm426xxTransport.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	
 ${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/default/55046f768485d8488b61c2d9299111c5c4779279 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
@@ -417,65 +447,11 @@ ${OBJECTDIR}/_ext/1360937237/cdc_uart.o: ../src/cdc_uart.c  .generated_files/fla
 	@${RM} ${OBJECTDIR}/_ext/1360937237/cdc_uart.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/cdc_uart.o.d" -o ${OBJECTDIR}/_ext/1360937237/cdc_uart.o ../src/cdc_uart.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/424700249/bmi160.o: ../src/bmi160/bmi160.c  .generated_files/flags/default/d19d2166450e4f0fd71a358164c8468f8882c136 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/424700249" 
-	@${RM} ${OBJECTDIR}/_ext/424700249/bmi160.o.d 
-	@${RM} ${OBJECTDIR}/_ext/424700249/bmi160.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/424700249/bmi160.o.d" -o ${OBJECTDIR}/_ext/424700249/bmi160.o ../src/bmi160/bmi160.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o: ../src/Icm426xx/Icm426xxDriver_HL.c  .generated_files/flags/default/9344245e02500953dccc4804fbd509a95d4f1c1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL.o ../src/Icm426xx/Icm426xxDriver_HL.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o: ../src/Icm426xx/Icm426xxDriver_HL_apex.c  .generated_files/flags/default/feab0e66605f189ac6d62017387b738df635e3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxDriver_HL_apex.o ../src/Icm426xx/Icm426xxDriver_HL_apex.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o: ../src/Icm426xx/Icm426xxSelfTest.c  .generated_files/flags/default/6aaa4cdab184532a102ca676fc7802fd50c9157a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxSelfTest.o ../src/Icm426xx/Icm426xxSelfTest.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o: ../src/Icm426xx/Icm426xxTransport.c  .generated_files/flags/default/fb6595f0b3b0a771fc5a6a2fd83883eb96a2b29c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/903556193" 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d 
-	@${RM} ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o.d" -o ${OBJECTDIR}/_ext/903556193/Icm426xxTransport.o ../src/Icm426xx/Icm426xxTransport.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/1360937237/ringbuffer.o: ../src/ringbuffer.c  .generated_files/flags/default/b82196ab9e046c3cfbb4c2327b1c2e60a70d92bf .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1360937237/ringbuffer.o: ../src/ringbuffer.c  .generated_files/flags/default/8cb54a9dff7c5ca5ef36964b11c4885a9948d4c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/ringbuffer.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d" -o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o ../src/ringbuffer.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/21102530/bmi160_sensor.o: ../src/app_config/bmi160/bmi160_sensor.c  .generated_files/flags/default/8a4cda6380eb4b50de0f21e66e33c6e718210b6c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/21102530" 
-	@${RM} ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o.d 
-	@${RM} ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/21102530/bmi160_sensor.o.d" -o ${OBJECTDIR}/_ext/21102530/bmi160_sensor.o ../src/app_config/bmi160/bmi160_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o: ../src/app_config/icm42688/icm42688_sensor.c  .generated_files/flags/default/97379fb95ad12592fd0e9ccde5a147e29b10cdec .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/2048461350" 
-	@${RM} ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o.d" -o ${OBJECTDIR}/_ext/2048461350/icm42688_sensor.o ../src/app_config/icm42688/icm42688_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o: ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/default/148c1b37b0a9d3e7b50c375bc5aca88308ff5f83 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/17022449" 
-	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d 
-	@${RM} ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o.d" -o ${OBJECTDIR}/_ext/17022449/plib_sercom0_spi_master.o ../src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
-	
-${OBJECTDIR}/_ext/60167341/plib_eic.o: ../src/config/default/peripheral/eic/plib_eic.c  .generated_files/flags/default/10944ec2a59a47869e99be4300eef5cde4b6c3de .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/60167341" 
-	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o.d 
-	@${RM} ${OBJECTDIR}/_ext/60167341/plib_eic.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/60167341/plib_eic.o.d" -o ${OBJECTDIR}/_ext/60167341/plib_eic.o ../src/config/default/peripheral/eic/plib_eic.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -DSNSR_TYPE_ICM42688=1 -DICM42688 -I"../src" -I"../src/config/default" -I"../src/packs/ATSAMD21J18A_DFP" -I"../src/packs/CMSIS/" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/Icm426xx" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/ringbuffer.o.d" -o ${OBJECTDIR}/_ext/1360937237/ringbuffer.o ../src/ringbuffer.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
 endif
 
