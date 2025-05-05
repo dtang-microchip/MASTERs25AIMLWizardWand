@@ -210,6 +210,10 @@ void SYS_Initialize ( void* data )
     NVMCTRL_Initialize( );
 
 
+    SERCOM0_SPI_Initialize();
+
+    EIC_Initialize();
+
 
 
     /* MISRAC 2012 deviation block start */
@@ -219,13 +223,13 @@ void SYS_Initialize ( void* data )
 
 
 
-    /* Initialize USB Driver */ 
-    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);
-
 
     /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
 
+
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);
 
 
     /* MISRAC 2012 deviation block end */
